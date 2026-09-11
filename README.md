@@ -18,6 +18,7 @@ Not consensus. Not an official Kaspa repo. Notes and outsider-safe patches so co
 | [docs/03-open-prs.md](docs/03-open-prs.md) | Open PRs: leave to core vs help |
 | [docs/04-first-code-change.md](docs/04-first-code-change.md) | How to land the e2e tests upstream |
 | [docs/05-testnet13.md](docs/05-testnet13.md) | TN13 operator notes |
+| [docs/06-partitioned-defi.md](docs/06-partitioned-defi.md) | Sutton 11 Sep 2026: DeFi is parallel; don’t serialize all state |
 | [tests/](tests/) | Patches for rusty-kaspa (`dagknight` branch) |
 | [ideas/inbox.md](ideas/inbox.md) | New ideas (append, don't overwrite) |
 | [log/](log/) | Dated findings as DK moves |

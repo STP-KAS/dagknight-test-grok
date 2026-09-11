@@ -14,3 +14,6 @@ Append dated bullets. Do not delete. Promote a bullet into `docs/` when it is sp
 - **Stale comment delete:** `protocol.rs` still says `TODO[DK]: Implement full UMC cascade voting after coloring` but cascade is already called. Comment-only nit, good first PR.
 - **IBD JSON coloring vs topology** (`testing/integration/src/common/json.rs`) — parse two GD blobs when present so DK IBD fixtures can exist.
 - **Do not** couple 100 BPS research into the DK testnet. Sutton 23 Aug 2026: wrong complexity mix.
+- **Partitioned-DeFi contention bench on TN10 (no DK required).** Two Argent/covenant apps: one shared vault vs N replica vaults with a bounded gap. Metric is rejected writes and time-to-gap, not TPS. If shared-state saturates at ~1 writer/block, Sutton’s 11 Sep 2026 hypothesis is visible before the HF. Promote: `docs/06-partitioned-defi.md`.
+- **Replica-merge events are the DK-related sub-series.** Confirmation policy (client `Δ`) is how a replica decides the gap is closed. Do **not** add a global DeFi sequencer opcode in the DK HF — that *is* the bottleneck he is arguing against.
+- **vProgs write-up hole (Sutton, same thread):** if DeFi truly must go through shared-state bottlenecks, ZK cannot save scalability. Track that post; don’t design vProgs as “one shared actor + proofs”.
