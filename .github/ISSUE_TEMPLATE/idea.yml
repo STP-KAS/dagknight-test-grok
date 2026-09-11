@@ -1,0 +1,25 @@
+name: Idea
+description: A DAGKnight / Sutton-bundle idea for this notebook
+title: "idea: "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Idea
+      description: One idea. Link a PR, paper section, or KIP if you have one.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - test
+        - confirmation-policy
+        - L1-hook
+        - simpa
+        - docs
+        - other
+    validations:
+      required: true
