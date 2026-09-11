@@ -21,7 +21,7 @@ Not consensus. Not an official Kaspa repo. Notes and outsider-safe patches so co
 | [docs/06-partitioned-defi.md](docs/06-partitioned-defi.md) | Sutton 11 Sep 2026: DeFi is parallel; don’t serialize all state |
 | [tests/](tests/) | Patches for rusty-kaspa (`dagknight` branch) |
 | [ideas/inbox.md](ideas/inbox.md) | New ideas (append, don't overwrite) |
-| [log/](log/) | Dated findings as DK moves |
+| [log/](log/) | Dated findings as DK moves ([Sutton 11 Sep DeFi post](log/2026-09-11-sutton-parallel-defi.md)) |
 
 ## Sutton's bundle (17 Jul 2025)
 
