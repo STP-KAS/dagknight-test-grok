@@ -17,6 +17,8 @@ Do **not**:
 - Treat client confirmation `Δ` as observed RTT (paper §1.4).
 - Overwrite history; append.
 
+Watch list: `handles.md` (from kaspa-master-file §5, DK-filtered). If a handle is wrong, patch the masterfile first.
+
 Sources to check:
 
 - https://github.com/kaspanet/rusty-kaspa/pulls?q=is%3Apr+dagknight

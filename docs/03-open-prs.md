@@ -1,12 +1,14 @@
 # Open DAGKnight PRs — who should touch them
 
-Reviewed 11 Sep 2026 against the paper (Algs. 2–6) and KIP-2.
+Reviewed 11 Sep 2026 against the paper (Algs. 2–6) and KIP-2. Rechecked 13 Sep: #1127 ready for review; last branch commit still 8 Sep.
 
 ## Leave to core
 
 ### #1127 bounded UMC (freshair18) — **the only paper-level consensus change**
 
-Draft. Replaces unbounded Alg. 6 with: reject coloring if a blue at depth ≥ `k⁴+1` from the merger has a negative vote, without finishing the walk to conflict genesis.
+**Ready for review 12 Sep 2026** (was draft). Replaces unbounded Alg. 6 with: reject coloring if a blue at depth ≥ `k⁴+1` from the merger has a negative vote, without finishing the walk to conflict genesis.
+
+FreshAir 12 Sep: batching, better depth-limit search, event-order polish, rough runtime analysis are in. **Formal security document still pending this week.** Follow-up PR (not this one): UMC from any viewpoint — (a) pruned checkpoints + diffs, or (b) versioned cells like SMT (`@biryukovmaxim`).
 
 - Author admits this is **not** vanilla DK. Security note is a TODO.
 - Intended error: false *reject* (slower, safer). False *accept* is supposed to be impossible — **not proven**.

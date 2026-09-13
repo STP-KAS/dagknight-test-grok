@@ -1,6 +1,6 @@
-# DAGKnight status (as of 11 Sep 2026)
+# DAGKnight status (rechecked 13 Sep 2026)
 
-KIP-2 is still **Proposed**. Mainnet runs GHOSTDAG. DK is on `dagknight`, gated by `ForkActivation`.
+Last `dagknight` **commit still 8 Sep** (`#1125`). Material delta: **#1127 marked ready for review 12 Sep**. Security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG. DK is on `dagknight`, gated by `ForkActivation`.
 
 ## Iterations (coderofstuff, Feb 2026)
 
@@ -19,7 +19,7 @@ Sutton's task list is still in `consensus/src/processes/dagknight/protocol.rs`.
 | Committed vs free coloring | Alg. 5 | `manager.rs` ConflictZoneManager | In |
 | Gray blocks (not representatives) | — | coloring path | In |
 | Tie-break | Alg. 4 | `tie_breaking.rs` | In; checks `k-1` not the full `[⌊k/2⌋, k]` range (Sutton suggestion) |
-| Incremental UMC cascade | Alg. 6 | `umc_cascade.rs`, `umc_voting.rs`, `umc_cascade_persistence.rs` | In; **bounded-DK** PR #1127 is a consensus change vs paper |
+| Incremental UMC cascade | Alg. 6 | `umc_cascade.rs`, `umc_voting.rs`, `umc_cascade_persistence.rs` | In; **bounded-DK** PR #1127 **ready for review 12 Sep** (paper change; security note pending) |
 
 Dual coloring:
 
