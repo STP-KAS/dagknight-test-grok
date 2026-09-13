@@ -6,6 +6,8 @@ These are not a standalone crate. Apply them on top of `dagknight`.
 |------|-----------------|
 | `dagknight_test.rs` | `testing/integration/src/consensus_integration_tests.rs` — replace the empty `dagknight_test` |
 | `dagknight_pipeline_e2e.rs` | `consensus/src/pipeline/virtual_processor/tests.rs` — append |
+| `parent_shuffle.rs` | `protocol.rs` tests — required before merging #1104 |
+| `confirmation_policy.rs` | new RPC types + depth helper; not consensus |
 
 Invariants both tests assert:
 
