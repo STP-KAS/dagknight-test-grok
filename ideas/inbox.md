@@ -2,6 +2,15 @@
 
 Append dated bullets. Do not delete. Promote a bullet into `docs/` when it is specified enough to PR.
 
+## 2026-09-14
+
+- **Done (landed, not merged):** e2e tests as one commit on `dagknight` → [#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131).
+- **Done (landed, not merged):** parent-shuffle property test → [#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132), also commented on #1104.
+- **Done (review, not a competing PR):** #1124 withheld-side-dag must assert `total_cascade_flips > 0`. Comment + `tests/pr1124_withheld_cascade_flips.patch`.
+- **Done (types, not opcode):** confirmation-policy crate compiles; opcode 154 still free; node still must not pick Δ.
+- **Done (wait):** TN13 DNS seeder stays empty. Public-v1 checklist is in `docs/05-testnet13.md`. Do not invent a hostname.
+- **Intel, do not copy:** Hoosat Network's Go `HTND` DAGKnight (fork of kaspad) is a live alt-path, not Kaspa core. Documented deviations vs paper: `g(k)=k` instead of `⌊√k⌋`, recursion from global tips, omitted `reps_G(P)`, hash-lex anticone order. Kaspa rusty-kaspa `dagknight` is the pin. See `log/2026-09-14.md`.
+
 ## 2026-09-11
 
 - **Parent-shuffle property test for #1104.** `dagknight(parents)` vs `dagknight(shuffled(parents))` must return the same selected parent. If `sort_unstable()` on agreement groups is protocol-equivalent, this passes; if it masks a bug, this fails. Smallest test that should block merging the executor rewrite.

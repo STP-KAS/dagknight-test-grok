@@ -19,6 +19,12 @@ This repo exists because Sutton’s July 2025 bundle is still the map, and the w
 | 11 Sep | Spec’d reverse-MEV kickback + miner oracle-vote **sockets** (not markets) | Sutton’s “apply the remedy before the blow” |
 | 11 Sep | Logged Sutton’s parallel-DeFi post in full | App-layer dual of DK: order related sub-series, don’t serialize the world |
 | 13 Sep | Rechecked GitHub + masterfile X handles | **#1127 marked ready for review 12 Sep**; last `dagknight` **commit still 8 Sep** |
+| 14 Sep | Landed e2e tests as **one commit** on `dagknight` | [PR #1131](https://github.com/kaspanet/rusty-kaspa/pull/1131) fills empty `dagknight_test` |
+| 14 Sep | Parent-shuffle property test for #1104 | [PR #1132](https://github.com/kaspanet/rusty-kaspa/pull/1132) |
+| 14 Sep | Tightened #1124 asserts on the PR | `cascade_flips > 0` on withheld-side-dag |
+| 14 Sep | Confirmation-policy types compile | opcode 154 still free; `cargo test` 8 passed |
+| 14 Sep | TN13 seeder still empty | public v1 not asked; checklist only |
+| 14 Sep | Hoosat Go DAGKnight scanned | alt-path, `g(k)=k`; **not** a Kaspa pin |
 
 Daily Grok job (09:00 Europe/Brussels) appends `log/` when something moves.
 
@@ -28,11 +34,11 @@ Daily Grok job (09:00 Europe/Brussels) appends `log/` when something moves.
 
 **Do (outsider-safe):**
 
-1. Land `tests/dagknight_test.rs` + `tests/dagknight_pipeline_e2e.rs` as **one commit** on `dagknight`, not `master`.
-2. Tighten [#1124](https://github.com/kaspanet/rusty-kaspa/pull/1124) asserts (`cascade_flips > 0` on withheld-side-dag).
-3. Parent-shuffle property test for [#1104](https://github.com/kaspanet/rusty-kaspa/pull/1104) — `tests/parent_shuffle.rs`.
-4. Confirmation-policy RPC — `docs/01-kip2-confirmation-policy.md` + `tests/confirmation_policy.rs` types.
-5. TN13 docs / seeder when they actually want a public v1.
+1. Land `tests/dagknight_test.rs` + `tests/dagknight_pipeline_e2e.rs` as **one commit** on `dagknight`, not `master`. → **[#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131)** (14 Sep).
+2. Tighten [#1124](https://github.com/kaspanet/rusty-kaspa/pull/1124) asserts (`cascade_flips > 0` on withheld-side-dag). → commented + patch.
+3. Parent-shuffle property test for [#1104](https://github.com/kaspanet/rusty-kaspa/pull/1104) — `tests/parent_shuffle.rs`. → **[#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132)**.
+4. Confirmation-policy RPC — `docs/01-kip2-confirmation-policy.md` + `tests/confirmation_policy.rs` types. → types compile; opcode not landed.
+5. TN13 docs / seeder when they actually want a public v1. → **wait**; checklist in `docs/05-testnet13.md`.
 
 **Do not:**
 
@@ -59,17 +65,20 @@ Playbook: [docs/07-help-core.md](docs/07-help-core.md)
 | [docs/06-partitioned-defi.md](docs/06-partitioned-defi.md) | Sutton 11 Sep: DeFi is parallel |
 | [docs/07-help-core.md](docs/07-help-core.md) | Ranked next actions |
 | [handles.md](handles.md) | X + GitHub watch list (from kaspa-master-file §5, DK-filtered) |
+| [Cargo.toml](Cargo.toml) | Standalone crate for confirmation-policy types (`cargo test`) |
 | [tests/](tests/) | Patches for the `dagknight` branch |
 | [ideas/inbox.md](ideas/inbox.md) | Dated ideas |
 | [log/](log/) | Dated findings |
 
 Sutton bundle (17 Jul 2025): **DK + based ZK L1↔L2**, same HF window, plus cheap L1 sockets for reverse-MEV and miner oracle votes. 10 Aug 2026: *“The next main effort is DK.”* ZK/Toccata/Silver/Argent went first.
 
-## Pins (rechecked 13 Sep 2026)
+## Pins (rechecked 14 Sep 2026)
 
-- Last `dagknight` commit: **8 Sep** (`#1125` UMC prune 0xFF)
-- [#1127](https://github.com/kaspanet/rusty-kaspa/pull/1127) **ready for review 12 Sep** — bounded UMC `k⁴`; security write-up still “this week”
-- KIP-2 Proposed. TN13 params exist, no DNS seeds, not a public launch
+- Last **upstream** `dagknight` commit: still **8 Sep** (`#1125` UMC prune 0xFF)
+- Outsider PRs on `dagknight`: [#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131) e2e, [#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132) parent-shuffle
+- [#1127](https://github.com/kaspanet/rusty-kaspa/pull/1127) **ready for review 12 Sep** — bounded UMC `k⁴`; security write-up still pending. Leave it.
+- KIP-2 Proposed. Opcode 154 still free. TN13 params exist, no DNS seeds, not a public launch
+- Hoosat Go DAGKnight is a separate coin / `g(k)=k`. Not a Kaspa pin.
 - Masterfile of pins: [STP-KAS/kaspa-master-file](https://github.com/STP-KAS/kaspa-master-file) §5 handles
 
 ## License

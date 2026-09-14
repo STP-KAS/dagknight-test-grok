@@ -33,6 +33,8 @@ Do not add a "is this final?" boolean. That would re-hardcode k at the node.
 
 Opcode next free after 153: `GetTransactionConfirmationPolicy = 154`
 
+Rechecked 14 Sep 2026 on `dagknight` `rpc/core/src/api/ops.rs`: last assigned method is still `GetSeqCommitLaneProof = 153`. Types live in `tests/confirmation_policy.rs` (`cargo test` in this repo). Do not land the opcode on rusty-kaspa until the KIP text names the formula — types only, no header change.
+
 ```
 GetTransactionConfirmationPolicyRequest {
   transaction_id: Hash,            // or accepting_block_hash

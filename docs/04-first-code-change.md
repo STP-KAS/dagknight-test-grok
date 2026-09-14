@@ -44,15 +44,16 @@ This machine could not finish a build: no `libclang.dll` (rocksdb bindgen) and n
 
 First build of this clone is long (workspace crate).
 
-## How to turn it into an upstream PR
+## Landed 14 Sep 2026
 
-1. Fork `kaspanet/rusty-kaspa`, branch from `dagknight` (not `master`).
-2. One commit: only the test.
-3. Title: `[DK] Fill dagknight_test e2e from GD DAG fixtures`
-4. Body: structural invariants, not GD expected data; TN13/activation always; does not claim paper traces.
-5. Mention it in t.me/kasparnd/11027.
+One commit on `dagknight`, not `master`:
+[kaspanet/rusty-kaspa#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131)
+(`STP-KAS:dk-fill-dagknight-test-e2e`, commit `ca612f4`).
 
-Do **not** mix this with confirmation RPC or MEV hooks. Separate PRs.
+Parent-shuffle (separate PR, also on `dagknight`):
+[kaspanet/rusty-kaspa#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132).
+
+Do **not** mix confirmation RPC or MEV hooks into those PRs.
 
 ## Next code PRs (still no consensus rules)
 

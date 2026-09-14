@@ -6,12 +6,12 @@ Ranked. One PR at a time. Mention [t.me/kasparnd/11027](https://t.me/kasparnd/11
 
 | # | Work | Upstream target | Status here |
 |---|------|-----------------|-------------|
-| 1 | Fill empty `dagknight_test` | `testing/integration/src/consensus_integration_tests.rs` | `tests/dagknight_test.rs` |
-| 2 | Pipeline diamond e2e | `consensus/src/pipeline/virtual_processor/tests.rs` | `tests/dagknight_pipeline_e2e.rs` |
-| 3 | Parent-shuffle vs #1104 | new test next to `protocol.rs` | `tests/parent_shuffle.rs` |
-| 4 | Tighten #1124 | simpa adversary asserts | idea in inbox; do on the PR |
-| 5 | Delete stale UMC `todo!()` comment | `protocol.rs` line ~335 | comment-only nit |
-| 6 | Confirmation policy types | new RPC, opcode 154 | `tests/confirmation_policy.rs` + doc 01 |
+| 1 | Fill empty `dagknight_test` | `testing/integration/src/consensus_integration_tests.rs` | **PR [#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131)** (14 Sep, `dagknight`) |
+| 2 | Pipeline diamond e2e | `consensus/src/pipeline/virtual_processor/tests.rs` | same commit as #1131 |
+| 3 | Parent-shuffle vs #1104 | `protocol.rs` tests | **PR [#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132)**; comment on #1104 |
+| 4 | Tighten #1124 | simpa adversary asserts | comment + `tests/pr1124_withheld_cascade_flips.patch` |
+| 5 | Delete stale UMC `todo!()` comment | `protocol.rs` line ~335 | comment-only nit, still open |
+| 6 | Confirmation policy types | new RPC, opcode 154 | `tests/confirmation_policy.rs` (8 unit tests pass locally) + doc 01 |
 
 ## Wait on core
 
@@ -30,12 +30,6 @@ Sutton 11 Sep: related sub-series still need order; the rest of DeFi should not 
 
 ## How to send a test PR
 
-```
-git clone -b dagknight --single-branch https://github.com/kaspanet/rusty-kaspa.git
-# apply tests/dagknight_test.rs  (replace the empty fn)
-# apply tests/dagknight_pipeline_e2e.rs (append)
-git commit -m "[DK] Fill dagknight_test e2e from GD DAG fixtures"
-# PR against kaspanet:dagknight
-```
+Sent 14 Sep 2026 as [#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131) against `kaspanet:dagknight` from `STP-KAS:dk-fill-dagknight-test-e2e`.
 
-Needs LLVM (`libclang`) + `protoc` to compile on Windows.
+This Windows box still cannot compile rusty-kaspa (`libclang.dll` / `protoc` missing). CI on the PR is the compile. Confirmation-policy types compile here: `cargo test` in this repo.

@@ -27,3 +27,18 @@ TN13 wallet params still use DAA maturity: user 100, coinbase 1000, stasis 500 (
 - Exercise DAA, coinbase, IBD, pruning **wiring** around DK parent selection
 
 It is not a promise that confirmation times match the paper's optimistic bound.
+
+## Public v1 seeder — wait until core asks
+
+`TESTNET13_PARAMS.dns_seeders` is `&[]` on purpose (`consensus/core/src/config/params.rs`). coderofstuff's first iteration is an isolated history, not a public launch. Filling seeders now would look like a launch they have not announced.
+
+When they actually want a public v1, the outsider-safe docs/seeder PR is:
+
+1. Core names at least one DNS seeder they control (do not invent a hostname).
+2. Add it to `TESTNET13_PARAMS.dns_seeders` only.
+3. Document ports in `docs/testnet13.md` + `dagknight_activation` in `docs/override-params.md` (both missing upstream).
+4. Dedicated ports already exist: p2p **16711**, grpc 16710, borsh 17710, json 18710 (`#1120`).
+5. Keep mainnet / TN10 `dagknight_activation = never()`. Keep the `kaspad` mainnet panic until the branch is no longer experimental.
+6. Do **not** copy mainnet DNS seeders. TN13 genesis is its own coin identity (`DAGKNIGHT` + `TN13, Launch 1` in the coinbase payload).
+
+Until that request: empty seeders stay empty. This notebook will not add one.
