@@ -37,5 +37,7 @@ Copied from [kaspa-master-file §5](https://github.com/STP-KAS/kaspa-master-file
 | [coderofstuff/dk-wiki](https://github.com/coderofstuff/dk-wiki) | Unofficial wiki. Not a pin. |
 | [STP-KAS/dagknight-test-grok](https://github.com/STP-KAS/dagknight-test-grok) | This notebook. Not a pin. |
 | [STP-KAS/kaspa-master-file](https://github.com/STP-KAS/kaspa-master-file) | Pin list. Source of this table. |
+| [STP-KAS/rusty-kaspa](https://github.com/STP-KAS/rusty-kaspa) | Fork used to open #1131 / #1132 against `dagknight`. Not a pin. |
+| [HoosatNetwork/HTND](https://github.com/HoosatNetwork/HTND) | Go DAGKnight on a kaspad fork. Separate coin. `g(k)=k`. **Not a Kaspa pin.** |
 
 If a handle here is wrong, patch **kaspa-master-file §5 first**, then this file.

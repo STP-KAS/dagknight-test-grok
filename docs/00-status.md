@@ -1,6 +1,6 @@
-# DAGKnight status (rechecked 13 Sep 2026)
+# DAGKnight status (rechecked 14 Sep 2026)
 
-Last `dagknight` **commit still 8 Sep** (`#1125`). Material delta: **#1127 marked ready for review 12 Sep**. Security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG. DK is on `dagknight`, gated by `ForkActivation`.
+Last **upstream** `dagknight` commit still **8 Sep** (`#1125`). No merge 9–14 Sep. Material outsider delta today: e2e tests opened as **[#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131)** and parent-shuffle as **[#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132)**, both against `dagknight` not `master`. #1127 still ready-for-review, security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG.
 
 ## Iterations (coderofstuff, Feb 2026)
 
@@ -54,20 +54,23 @@ Consensus-touching (leave to Sutton / coderofstuff / PR authors):
 
 Outsider-safe:
 
-- Integration e2e placeholder — **filled in this clone** (`dagknight_test`)
-- `#1124` simpa adversarial scenarios (honest simpa barely conflicts)
-- Wallet confirmation-policy RPC (KIP-2, see `01-kip2-confirmation-policy.md`)
-- Remaining activation comments + TN13 seeder / ports docs
+- Integration e2e placeholder — **PR #1131** (14 Sep)
+- Parent-shuffle vs #1104 — **PR #1132** (14 Sep)
+- `#1124` simpa adversarial scenarios — assert tighten posted on the PR (cascade_flips > 0)
+- Wallet confirmation-policy types (KIP-2, see `01-kip2-confirmation-policy.md`); opcode 154 still free
+- Remaining activation comments + TN13 seeder / ports docs — **seeder wait** until they want a public v1
 - `testing/integration/src/common/json.rs:29` — coloring vs topology in JSON tests
 
-## Open PRs (11 Sep 2026)
+## Open PRs (14 Sep 2026)
 
 | PR | Author | Touch consensus? | Outsider action |
 |----|--------|------------------|-----------------|
 | [#1127](https://github.com/kaspanet/rusty-kaspa/pull/1127) | freshair18 | **Yes** — bounded UMC | Read, do not drive |
-| [#1124](https://github.com/kaspanet/rusty-kaspa/pull/1124) | Kali123411 | No — simpa harness | Review, extend scenarios |
+| [#1132](https://github.com/kaspanet/rusty-kaspa/pull/1132) | STP-KAS | No — parent-shuffle test | Ours; blocks #1104 merge |
+| [#1131](https://github.com/kaspanet/rusty-kaspa/pull/1131) | STP-KAS | No — e2e tests | Ours; fills empty `dagknight_test` |
+| [#1124](https://github.com/kaspanet/rusty-kaspa/pull/1124) | Kali123411 | No — simpa harness | Tighten cascade_flips; commented |
 | [#1122](https://github.com/kaspanet/rusty-kaspa/pull/1122) / [#1121](https://github.com/kaspanet/rusty-kaspa/pull/1121) | D-Stacks | Yes — SSAV2 | Leave |
-| [#1104](https://github.com/kaspanet/rusty-kaspa/pull/1104) | biryukovmaxim | Yes — executor rewrite | Leave; 32 comments already |
+| [#1104](https://github.com/kaspanet/rusty-kaspa/pull/1104) | biryukovmaxim | Yes — executor rewrite | Leave; pointed at #1132 |
 | [#1103](https://github.com/kaspanet/rusty-kaspa/pull/1103) | biryukovmaxim | Reachability perf | Leave |
 
 ## Sutton caveats still in force

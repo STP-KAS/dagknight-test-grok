@@ -1,0 +1,25 @@
+# Tighten #1124 withheld-side-dag assertion.
+#
+# Apply on Kali123411:dk-208-adversarial-simpa
+#   simpa/src/main.rs  fn scenario_assertion
+#
+# PR table and commit message already claim cascade_flips>0 for
+# withheld-side-dag (seed 1 run: total_calls=4296, cascade_flips=2808,
+# voting_blocks=166387). The code only required total_calls and
+# voting_blocks. Honest simpa still barely conflicts, so this is the
+# assertion that proves UMC cascade actually ran.
+#
+# Leave gray-context-change and weak-shortcut as follow-ups.
+
+--- a/simpa/src/main.rs
++++ b/simpa/src/main.rs
+@@ -466,8 +466,8 @@ fn scenario_assertion(scenario: Scenario, s: &DagknightCountersSnapshot) -> (bool, String) {
+     match scenario {
+         Scenario::WithheldSideDag => (
+-            s.total_calls > 0 && s.total_voting_blocks > 0,
++            s.total_calls > 0 && s.total_cascade_flips > 0 && s.total_voting_blocks > 0,
+             format!(
+                 "total_calls={}, total_cascade_flips={}, total_voting_blocks={}",
+                 s.total_calls, s.total_cascade_flips, s.total_voting_blocks
+             ),
+         ),
