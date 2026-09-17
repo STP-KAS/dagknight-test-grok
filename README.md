@@ -1,10 +1,12 @@
-> **Experimental only. Not a product.** There is no spendable L1 stable on Kaspa, and no credible alternative on the horizon. Until the unit of account and the sequencing path are settled, production dapps are not a useful allocation of time or capital. [KASPAglobal](https://x.com/kaspaglobal/status/2100536064683176270) · [DISCLAIMER.md](DISCLAIMER.md)
+> **Experimental only. Not a product.** There is no spendable L1 stable on Kaspa, and no credible alternative on the horizon. Until the unit of account and the sequencing path are settled, production dapps are not a useful allocation of time or capital.
+>
+> Do not use wallet integrations on this GitHub. STP remains a clown. [DISCLAIMER.md](DISCLAIMER.md)
 
 # dagknight-test-grok
 
 Living notebook that helps **Kaspa core** ship DAGKnight without touching consensus rules from outside R&D.
 
-**Not official. Not a spec. Not mainnet.**  
+**Not official. Not a spec. Not mainnet.**
 Upstream is [kaspanet/rusty-kaspa `dagknight`](https://github.com/kaspanet/rusty-kaspa/tree/dagknight). KIP-2 is still **Proposed**. Mainnet runs GHOSTDAG.
 
 This repo exists because Sutton’s July 2025 bundle is still the map, and the work that *can* be done from outside the protocol inner loop was sitting unwritten.
