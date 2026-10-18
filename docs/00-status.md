@@ -1,6 +1,6 @@
-# DAGKnight status (rechecked 2 Oct 2026)
+# DAGKnight status (rechecked 18 Oct 2026)
 
-Last **upstream** `dagknight` commit still **8 Sep** (`#1125`, `ad45e241`). No merge 9 Sep–2 Oct. **#1131** and **#1132** closed unmerged 26 Sep (STP-KAS); neither landed. #1121/#1122 rebased onto `dagknight` 19 Sep (merge commits only). #1127 still ready-for-review, security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG.
+Last **upstream** `dagknight` commit still **8 Sep** (`#1125`, `ad45e241`). No merge 9 Sep–18 Oct. 16 Oct: Sutton stated belief in stable+secure testnet this year (TN13).. **#1131** and **#1132** closed unmerged 26 Sep (STP-KAS); neither landed. #1121/#1122 rebased onto `dagknight` 19 Sep (merge commits only). #1127 still ready-for-review, security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG.
 
 ## Iterations (coderofstuff, Feb 2026)
 
