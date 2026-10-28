@@ -1,6 +1,6 @@
 # Open DAGKnight PRs — who should touch them
 
-Reviewed 11 Sep 2026 against the paper (Algs. 2–6) and KIP-2. Rechecked 18 Oct 2026: last **upstream** `dagknight` commit still 8 Sep (`#1125`, `ad45e241`). 16 Oct Sutton: belief in stable+secure TN this year. **#1131** and **#1132** closed unmerged 26 Sep. #1121/#1122 rebased onto `dagknight` 19 Sep. #1127 still ready-for-review; security note still absent.
+Reviewed 11 Sep 2026 against the paper (Algs. 2–6) and KIP-2. Rechecked 28 Oct 2026: last **upstream** `dagknight` commit still 8 Sep (`#1125`, `ad45e241`). 16 Oct Sutton: belief in stable+secure TN this year. 21 Oct: will eventually share a lot of DK work. 26–27 Oct: Sutton spoke on DAGKnight at Mid-Chain; kaspa.news confirms no launch date and no merge since 8 Sep. **#1131** and **#1132** closed unmerged 26 Sep. #1121/#1122 rebased onto `dagknight` 19 Sep. #1127 still ready-for-review; security note still absent.
 
 ## Leave to core
 

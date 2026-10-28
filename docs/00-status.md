@@ -1,6 +1,6 @@
-# DAGKnight status (rechecked 18 Oct 2026)
+# DAGKnight status (rechecked 28 Oct 2026)
 
-Last **upstream** `dagknight` commit still **8 Sep** (`#1125`, `ad45e241`). No merge 9 Sep–18 Oct. 16 Oct: Sutton stated belief in stable+secure testnet this year (TN13). **#1131** and **#1132** closed unmerged 26 Sep (STP-KAS); neither landed. #1121/#1122 rebased onto `dagknight` 19 Sep (merge commits only). #1127 still ready-for-review, security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG.
+Last **upstream** `dagknight` commit still **8 Sep** (`#1125`, `ad45e241`). No merge 9 Sep–28 Oct. 16 Oct: Sutton stated belief in stable+secure testnet this year (TN13). 21 Oct: Sutton said he will eventually share a whole lot of work going on with DK. 26–27 Oct: Sutton spoke on DAGKnight at Mid-Chain (BGU); kaspa.news coverage confirms no launch date and no merge since 8 Sep. **#1131** and **#1132** closed unmerged 26 Sep (STP-KAS); neither landed. #1121/#1122 rebased onto `dagknight` 19 Sep (merge commits only). #1127 still ready-for-review, security write-up still pending. KIP-2 still **Proposed**. Mainnet runs GHOSTDAG.
 
 ## Iterations (coderofstuff, Feb 2026)
 
@@ -61,7 +61,7 @@ Outsider-safe:
 - Remaining activation comments + TN13 seeder / ports docs — **seeder wait** until they want a public v1
 - `testing/integration/src/common/json.rs:29` — coloring vs topology in JSON tests
 
-## Open PRs (2 Oct 2026)
+## Open PRs (28 Oct 2026)
 
 | PR | Author | Touch consensus? | Outsider action |
 |----|--------|------------------|-----------------|
